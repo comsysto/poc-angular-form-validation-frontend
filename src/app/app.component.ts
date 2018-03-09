@@ -12,12 +12,13 @@ import { TranslateService } from '@ngx-translate/core';
     offsetY="0"
   ></cloukit-notification-outlet-loader>
   <div class="app">
+    <div><h2>Frontend</h2></div>
     <div class="lang">
       <button (click)="localeDe()" class="langButton" [class.langActive]="currentLanguage() == 'de'">DE</button>
       <button (click)="localeEn()" class="langButton" [class.langActive]="currentLanguage() == 'en'">EN</button>
-      <span translate style="padding-left:5px;">app.language.label</span>
+      <span translate style="padding-left:5px;min-width:100px;">app.language.label</span>
     </div>
-    <app-backend-health [backendUrl]="backendUrl"></app-backend-health>
+    <app-backend-health class="health" [backendUrl]="backendUrl"></app-backend-health>
   </div>
   <app-create-ticket [backendUrl]="backendUrl"></app-create-ticket>
   <app-pluralization-i18n-demo></app-pluralization-i18n-demo>

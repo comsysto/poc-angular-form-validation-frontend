@@ -2,3 +2,8 @@
 .langActive { font-weight:bold; }
 .lang { display:flex; align-items: center; }
 .langButton { margin-right:5px; }
+.health {
+  min-width: 220px;
+  display:flex;
+  justify-content: flex-end;
+}
