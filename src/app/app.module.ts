@@ -9,9 +9,13 @@ import { AppComponent } from './app.component';
 import { BackendHealthComponent } from './components/backend-health/backend-health.component';
 import { PluralizationI18nDemoComponent } from './components/pluralization-i18n-demo/pluralization-i18n-demo.component';
 
-// AoT requires an exported function for factories
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+export function createTranslateLoader(http: HttpClient) {
+  let baseHref = '/';
+  if (document.getElementsByTagName('base').length > 0) {
+    baseHref = document.getElementsByTagName('base')[0].getAttribute('href') + '/';
+  }
+  console.log(baseHref);
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -26,7 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
+        useFactory: (createTranslateLoader),
         deps: [HttpClient],
       },
       compiler: {

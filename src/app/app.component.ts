@@ -10,6 +10,11 @@ import { TranslateService } from '@ngx-translate/core';
       <button (click)="localeEn()" [class.langActive]="currentLanguage() == 'en'">EN</button>
       <span translate style="padding-left:5px;">app.language.label</span>
     </div>
+    <div class="lang">
+      <a href="https://github.com/comsysto/poc-angular-form-validation-frontend" target="_blank">
+        GitHub
+      </a>
+    </div>
     <app-backend-health></app-backend-health>
   </div>
   <app-pluralization-i18n-demo></app-pluralization-i18n-demo>
