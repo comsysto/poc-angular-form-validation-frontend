@@ -24,6 +24,8 @@ rm -rf assets || true
 rm -f index.html || true
 rm -f *.js.map || true
 rm -f *.js || true
+rm -f *.css || true
+
 #
 # DEPLOY
 #
