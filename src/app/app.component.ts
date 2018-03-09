@@ -4,6 +4,13 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-root',
   template: `
+  <cloukit-dropout-outlet></cloukit-dropout-outlet>
+  <cloukit-notification-outlet-loader
+    theme="notification"
+    placement="bottomLeft"
+    offsetX="80"
+    offsetY="0"
+  ></cloukit-notification-outlet-loader>
   <div class="app">
     <div class="lang">
       <button (click)="localeDe()" class="langButton" [class.langActive]="currentLanguage() == 'de'">DE</button>

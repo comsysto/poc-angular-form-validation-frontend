@@ -10,8 +10,26 @@
     }
   },
   "createTicket": {
+    "submit": {
+      "label": "Ticket anlegen"
+    },
+    "success": "Ticket wurde erfolgreich angelegt",
     "headline": "Ticket Anlegen - Form Validation PoC",
-    "description": "Die Formular Validierungs Regeln werden vom Backend geladen und das Formular entsprechend initialisiert. Auch die angezeigten Fehlermeldungen kommen aus dem backend."
+    "description": "Die Formular Validierungs Regeln werden vom Backend geladen und das Formular entsprechend initialisiert. Auch die angezeigten Fehlermeldungen kommen aus dem Backend.",
+    "field": {
+      "id": {
+        "label": "Ticket-ID"
+      },
+      "summary": {
+        "label": "Zusammenfassung"
+      },
+      "description": {
+        "label": "Beschreibung"
+      },
+      "reporter": {
+        "label": "Berichterstatter"
+      }
+    }
   },
   "pluralizationDemo": {
     "headline": "I18n Pluralisierung mit Intl MessageFormat",

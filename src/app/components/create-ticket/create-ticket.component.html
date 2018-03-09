@@ -1,12 +1,16 @@
 <div class="createTicket">
     <h3 translate>createTicket.headline</h3>
     <div translate>createTicket.description</div>
-    <div class="initError" *ngIf="initFormError">ERROR INITIALIZING THE FORM</div>
+    <div class="initError" *ngIf="initFormError">ERROR INITIALIZING THE FORM. MOST LIKELY BACKEND IS DOWN.</div>
     <form [formGroup]="form" *ngIf="form">
       <div class="formRow">
         <div class="formLabel" translate>createTicket.field.id.label</div>
         <div class="formInput">
-          <input formControlName="id" type="text" />
+          <input
+            class="formInputField"
+            [class.formInputFieldValid]="!form.pristine && !form.controls.id?.errors"
+            [class.formInputFieldError]="!form.pristine && form.controls.id?.errors"
+            formControlName="id" type="text" />
           <div
             class="formError"
             *ngIf="!form.pristine && form.controls.id?.errors"
@@ -14,15 +18,53 @@
         </div>
       </div>
       <div class="formRow">
-          <div class="formLabel" translate>createTicket.field.summary.label</div>
-          <div class="formInput">
-            <input formControlName="summary" type="text" />
-            <div
-              class="formError"
-              *ngIf="!form.pristine && form.controls.summary?.errors"
-            >{{displayErrors('summary')}}</div>
-          </div>
+        <div class="formLabel" translate>createTicket.field.summary.label</div>
+        <div class="formInput">
+          <input
+            class="formInputField"
+            [class.formInputFieldValid]="!form.pristine && !form.controls.summary?.errors"
+            [class.formInputFieldError]="!form.pristine && form.controls.summary?.errors"
+            formControlName="summary" type="text" />
+          <div
+            class="formError"
+            *ngIf="!form.pristine && form.controls.summary?.errors"
+          >{{displayErrors('summary')}}</div>
         </div>
-      isValid: {{form.valid}}<br>
+      </div>
+      <div class="formRow">
+        <div class="formLabel" translate>createTicket.field.description.label</div>
+        <div class="formInput">
+          <input
+            class="formInputField"
+            [class.formInputFieldValid]="!form.pristine && !form.controls.description?.errors"
+            [class.formInputFieldError]="!form.pristine && form.controls.description?.errors"
+            formControlName="description" type="text" />
+          <div
+            class="formError"
+            *ngIf="!form.pristine && form.controls.description?.errors"
+          >{{displayErrors('description')}}</div>
+        </div>
+      </div>
+      <div class="formRow">
+        <div class="formLabel" translate>createTicket.field.reporter.label</div>
+        <div class="formInput">
+          <input
+            class="formInputField"
+            [class.formInputFieldValid]="!form.pristine && !form.controls.reporter?.errors"
+            [class.formInputFieldError]="!form.pristine && form.controls.reporter?.errors"
+            formControlName="reporter" type="text" />
+          <div
+            class="formError"
+            *ngIf="!form.pristine && form.controls.reporter?.errors"
+          >{{displayErrors('reporter')}}</div>
+        </div>
+      </div>
+      <div class="formButtons">
+        <button
+          type="button"
+          translate
+          (click)="createTicket()"
+        >createTicket.submit.label</button>
+      </div>
     </form>
 </div>

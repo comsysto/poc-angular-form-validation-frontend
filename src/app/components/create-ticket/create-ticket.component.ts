@@ -6,6 +6,13 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/takeUntil';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/empty';
+import {
+  CloukitNotificationService,
+  CloukitNotification,
+  CloukitNotificationType,
+  CloukitNotificationLink,
+  CloukitNotificationAction,
+} from '@cloukit/notification';
 import { FieldValidationRule, ValidationRulePattern, ValidationRuleMinMaxLength } from '../../model/api.model';
 import { TranslateService } from '@ngx-translate/core';
 import { Subject } from 'rxjs/Subject';
@@ -27,7 +34,8 @@ export class CreateTicketComponent implements OnInit, OnDestroy {
   public backendUrl: string;
 
   constructor(private http: HttpClient,
-              private translate: TranslateService) { }
+              private translate: TranslateService,
+              private notificationService: CloukitNotificationService) { }
 
   ngOnInit() {
     this.initForm(this.translate.currentLang);
@@ -68,9 +76,38 @@ export class CreateTicketComponent implements OnInit, OnDestroy {
     this.form = new FormGroup({
       id: new FormControl('', this.buildValidatorsForField('id')),
       summary: new FormControl('', this.buildValidatorsForField('summary')),
-      description: new FormControl('', this.buildValidatorsForField('summary')),
+      description: new FormControl('', this.buildValidatorsForField('description')),
       reporter: new FormControl('', this.buildValidatorsForField('reporter')),
     })
+  }
+
+  createTicket() {
+    this.form.markAsDirty();
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Accept-Language': this.translate.currentLang
+      })
+    };
+    this.http
+      .post<void>(this.backendUrl + '/api/tickets', this.form.value, httpOptions)
+      .catch((errors) => {
+        this.notificationService.addNotification(
+          new CloukitNotification(
+            errors.error.message,
+            errors.error.errors.map(f => `[${f.field}]: ${f.message} --- `).join(''),
+            CloukitNotificationType.ERROR, null, null, 5000));
+        // Stop propagating further!
+        return Observable.empty();
+      })
+      .subscribe(fieldValidationRules => {
+        console.log('save ok');
+        this.notificationService.addNotification(
+          new CloukitNotification(
+            this.translate.instant('createTicket.success'),
+            '',
+            CloukitNotificationType.SUCCESS, null, null, 5000));
+      });
   }
 
   buildValidatorsForField(field: string): ValidatorFn[] {
@@ -103,9 +140,22 @@ export class CreateTicketComponent implements OnInit, OnDestroy {
       const errorKeys = Object.keys(errors);
       for (let errorKey of errorKeys) {
         const rule = this.validationRules.find(r => r.field === field)
-        errorString = errorString + rule.validations.find(v => v.type === errorKey).message + ' ';
+        const errorByKey = rule.validations.find(v => v.type === this.mapAngularValidationTypesToBackendValidationTypes(errorKey));
+        if (!isNullOrUndefined(errorByKey)) {
+          errorString = errorString + errorByKey.message + ' ';
+        }
       }
     }
     return errorString;
+  }
+
+  mapAngularValidationTypesToBackendValidationTypes(angularValidationType: string) {
+    if (angularValidationType === 'minlength') {
+      return 'minLength';
+    }
+    if (angularValidationType === 'maxlength') {
+      return 'maxLength';
+    }
+    return angularValidationType;
   }
 }

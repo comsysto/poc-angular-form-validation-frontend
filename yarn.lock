@@ -159,6 +159,26 @@
   dependencies:
     tslib "^1.7.1"
 
+"@cloukit/dropout@>=1.4.0":
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/@cloukit/dropout/-/dropout-1.5.6.tgz#435957ad5841355c6f5f64f8577787fb85fb8615"
+
+"@cloukit/icon@>=1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@cloukit/icon/-/icon-1.4.0.tgz#f5f09e3863f7512e6ed5e919628c376de166c5bd"
+
+"@cloukit/notification@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@cloukit/notification/-/notification-1.1.1.tgz#e79dc363ec14a830f33d332ef29045609e22153e"
+  dependencies:
+    "@cloukit/dropout" ">=1.4.0"
+    "@cloukit/icon" ">=1.4.0"
+    "@cloukit/theme" ">=1.6.1"
+
+"@cloukit/theme@>=1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@cloukit/theme/-/theme-1.6.1.tgz#35adb4e7926c79918c5307290d21c37cc41827d7"
+
 "@ngtools/json-schema@1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ngtools/json-schema/-/json-schema-1.2.0.tgz#06e5ecd29e9a37d260a447dd873ea2becd228c4f"
