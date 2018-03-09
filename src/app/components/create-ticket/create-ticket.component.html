@@ -1,4 +1,28 @@
 <div class="createTicket">
     <h3 translate>createTicket.headline</h3>
-    x
+    <div translate>createTicket.description</div>
+    <div class="initError" *ngIf="initFormError">ERROR INITIALIZING THE FORM</div>
+    <form [formGroup]="form" *ngIf="form">
+      <div class="formRow">
+        <div class="formLabel" translate>createTicket.field.id.label</div>
+        <div class="formInput">
+          <input formControlName="id" type="text" />
+          <div
+            class="formError"
+            *ngIf="!form.pristine && form.controls.id?.errors"
+          >{{displayErrors('id')}}</div>
+        </div>
+      </div>
+      <div class="formRow">
+          <div class="formLabel" translate>createTicket.field.summary.label</div>
+          <div class="formInput">
+            <input formControlName="summary" type="text" />
+            <div
+              class="formError"
+              *ngIf="!form.pristine && form.controls.summary?.errors"
+            >{{displayErrors('summary')}}</div>
+          </div>
+        </div>
+      isValid: {{form.valid}}<br>
+    </form>
 </div>

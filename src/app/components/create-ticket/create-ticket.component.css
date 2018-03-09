@@ -1,3 +1,7 @@
-.foo {
-
+.initError {
+  margin-top:10px;
+  margin-bottom:10px;
+  color:#fff;
+  padding:5px;
+  background-color: rgb(193, 16, 16);
 }

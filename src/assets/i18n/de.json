@@ -10,7 +10,8 @@
     }
   },
   "createTicket": {
-    "headline": "Ticket Anlegen - Form Validation PoC"
+    "headline": "Ticket Anlegen - Form Validation PoC",
+    "description": "Die Formular Validierungs Regeln werden vom Backend geladen und das Formular entsprechend initialisiert. Auch die angezeigten Fehlermeldungen kommen aus dem backend."
   },
   "pluralizationDemo": {
     "headline": "I18n Pluralisierung mit Intl MessageFormat",

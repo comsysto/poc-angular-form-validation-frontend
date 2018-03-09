@@ -10,7 +10,8 @@
     }
   },
   "createTicket": {
-    "headline": "Create Ticket - Form Validation PoC"
+    "headline": "Create Ticket - Form Validation PoC",
+    "description": "The Form Validation Rules are loaded from the backend and the Form is initialized like so. Also the Error Messages are loaded from the backend."
   },
   "pluralizationDemo": {
     "headline": "I18n Pluralization with Intl MessageFormat",
