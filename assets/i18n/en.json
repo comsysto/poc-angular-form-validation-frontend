@@ -10,8 +10,26 @@
     }
   },
   "createTicket": {
+    "submit": {
+      "label": "create ticket"
+    },
+    "success": "Ticket was created",
     "headline": "Create Ticket - Form Validation PoC",
-    "description": "The Form Validation Rules are loaded from the backend and the Form is initialized like so. Also the Error Messages are loaded from the backend."
+    "description": "The Form Validation Rules are loaded from the backend and the Form is initialized like so. Also the Error Messages are loaded from the backend.",
+    "field": {
+      "id": {
+        "label": "Ticket-ID"
+      },
+      "summary": {
+        "label": "Summary"
+      },
+      "description": {
+        "label": "Description"
+      },
+      "reporter": {
+        "label": "Reporter"
+      }
+    }
   },
   "pluralizationDemo": {
     "headline": "I18n Pluralization with Intl MessageFormat",
