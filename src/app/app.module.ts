@@ -8,6 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppComponent } from './app.component';
 import { BackendHealthComponent } from './components/backend-health/backend-health.component';
 import { PluralizationI18nDemoComponent } from './components/pluralization-i18n-demo/pluralization-i18n-demo.component';
+import { CreateTicketComponent } from './components/create-ticket/create-ticket.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -18,6 +19,7 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     BackendHealthComponent,
     PluralizationI18nDemoComponent,
+    CreateTicketComponent,
   ],
   imports: [
     BrowserModule,

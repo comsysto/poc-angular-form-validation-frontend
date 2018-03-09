@@ -6,12 +6,11 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/of';
 
 @Component({
-  selector: 'app-backend-health',
-  templateUrl: 'backend-health.component.html',
-  styleUrls: [ 'backend-health.component.css', '../../app.shared.styles.css' ]
+  selector: 'app-create-ticket',
+  templateUrl: 'create-ticket.component.html',
+  styleUrls: [ 'create-ticket.component.css', '../../app.shared.styles.css' ]
 })
-export class BackendHealthComponent implements OnInit {
-
+export class CreateTicketComponent implements OnInit {
   healthCheckInProgress = true;
   backendIsHealthy: boolean;
 
@@ -22,7 +21,7 @@ export class BackendHealthComponent implements OnInit {
 
   ngOnInit() {
     this.http
-      .get<boolean>(this.backendUrl + '/api/greetings')
+      .get<boolean>(this.backendUrl + '/api/tickets/validation_rules')
       .map(() => true)
       .catch(() => Observable.of(false))
       .subscribe(health => {
