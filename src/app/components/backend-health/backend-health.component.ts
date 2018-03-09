@@ -8,7 +8,7 @@ import 'rxjs/add/observable/of';
 @Component({
   selector: 'app-backend-health',
   templateUrl: 'backend-health.component.html',
-  styleUrls: [ 'backend-health.component.css' ]
+  styleUrls: [ 'backend-health.component.css', '../../app.shared.styles.css' ]
 })
 export class BackendHealthComponent implements OnInit {
   backendUrl = 'https://poc-angular-form-validation.herokuapp.com'

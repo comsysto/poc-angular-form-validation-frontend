@@ -1,0 +1,23 @@
+button {
+  border:1px solid #1080C1;
+  user-select: none;
+  background-color: #1080C1;
+  font-size: 15px;
+  color:#fff;
+  cursor: pointer;
+}
+button:hover {
+  border:1px solid #1080C1;
+  user-select: none;
+  background-color: #fff;
+  font-size: 15px;
+  color:#1080C1;
+}
+button:disabled {
+  border:1px solid #85B1CB;
+  user-select: none;
+  background-color: #85B1CB;
+  font-size: 15px;
+  color:#efefef;
+  cursor: not-allowed;
+}

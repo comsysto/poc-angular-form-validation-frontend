@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-pluralization-i18n-demo',
   templateUrl: 'pluralization-i18n-demo.component.html',
-  styleUrls: [ 'pluralization-i18n-demo.component.css' ]
+  styleUrls: [ 'pluralization-i18n-demo.component.css', '../../app.shared.styles.css' ]
 })
 export class PluralizationI18nDemoComponent {
 

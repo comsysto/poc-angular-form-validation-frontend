@@ -1,0 +1,4 @@
+.app { margin-top:30px; display:flex; justify-content:space-between; }
+.langActive { font-weight:bold; }
+.lang { display:flex; align-items: center; }
+.langButton { margin-right:5px; }

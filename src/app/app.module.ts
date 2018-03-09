@@ -10,11 +10,6 @@ import { BackendHealthComponent } from './components/backend-health/backend-heal
 import { PluralizationI18nDemoComponent } from './components/pluralization-i18n-demo/pluralization-i18n-demo.component';
 
 export function createTranslateLoader(http: HttpClient) {
-  let baseHref = '/';
-  if (document.getElementsByTagName('base').length > 0) {
-    baseHref = document.getElementsByTagName('base')[0].getAttribute('href') + '/';
-  }
-  console.log(baseHref);
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
