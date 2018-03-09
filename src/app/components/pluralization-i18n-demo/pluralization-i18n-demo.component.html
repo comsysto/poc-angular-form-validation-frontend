@@ -1,7 +1,7 @@
 <div class="pluralizationDemo">
   <h3 translate>pluralizationDemo.headline</h3>
-  <button (click)="removeCat()" [disabled]="!removeCatPossible()">remove cat</button>
-  <button (click)="addCat()" [disabled]="!addCatPossible()">add cat</button>
+  <button (click)="removeCat()" [disabled]="!removeCatPossible()" translate>pluralizationDemo.removeCat</button>
+  <button (click)="addCat()" [disabled]="!addCatPossible()" translate>pluralizationDemo.addCat</button>
 
   <div class="cats">
     <svg *ngFor="let i of numCats" class="cat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 521.48 957.94">
