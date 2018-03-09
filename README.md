@@ -23,7 +23,7 @@ The Frontend will provide:
 
  * a form to to create *Tickets*.
  * form validation in the *Tickets* form.
- * i18n Form Validation Errors loaded from backend.
+ * Form Validation Rules and i18n messages loaded from backend.
 
 
 &nbsp;
