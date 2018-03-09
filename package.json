@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href poc-angular-form-validation-frontend",
+    "build": "ng build --base-href poc-angular-form-validation-frontend",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -21,7 +21,9 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@cloukit/dropout": "^1.5.6",
     "@cloukit/notification": "^1.1.1",
+    "@cloukit/theme": "^1.6.1",
     "@ngx-translate/core": "^9.1.1",
     "@ngx-translate/http-loader": "^2.0.1",
     "core-js": "^2.4.1",
