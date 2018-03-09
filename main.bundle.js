@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /***/ "./src/app/app.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".app { margin-top:30px; display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between; }\n.langActive { font-weight:bold; }\n.lang { display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }\n.langButton { margin-right:5px; }\n"
+module.exports = ".app { margin-top:30px; display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between; }\n.langActive { font-weight:bold; }\n.lang { display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }\n.langButton { margin-right:5px; }\n.health {\n  min-width: 220px;\n  display:-webkit-box;\n  display:-ms-flexbox;\n  display:flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-root',
-            template: "\n  <cloukit-dropout-outlet></cloukit-dropout-outlet>\n  <cloukit-notification-outlet-loader\n    theme=\"notification\"\n    placement=\"bottomLeft\"\n    offsetX=\"80\"\n    offsetY=\"0\"\n  ></cloukit-notification-outlet-loader>\n  <div class=\"app\">\n    <div class=\"lang\">\n      <button (click)=\"localeDe()\" class=\"langButton\" [class.langActive]=\"currentLanguage() == 'de'\">DE</button>\n      <button (click)=\"localeEn()\" class=\"langButton\" [class.langActive]=\"currentLanguage() == 'en'\">EN</button>\n      <span translate style=\"padding-left:5px;\">app.language.label</span>\n    </div>\n    <app-backend-health [backendUrl]=\"backendUrl\"></app-backend-health>\n  </div>\n  <app-create-ticket [backendUrl]=\"backendUrl\"></app-create-ticket>\n  <app-pluralization-i18n-demo></app-pluralization-i18n-demo>\n  ",
+            template: "\n  <cloukit-dropout-outlet></cloukit-dropout-outlet>\n  <cloukit-notification-outlet-loader\n    theme=\"notification\"\n    placement=\"bottomLeft\"\n    offsetX=\"80\"\n    offsetY=\"0\"\n  ></cloukit-notification-outlet-loader>\n  <div class=\"app\">\n    <div><h2>Frontend</h2></div>\n    <div class=\"lang\">\n      <button (click)=\"localeDe()\" class=\"langButton\" [class.langActive]=\"currentLanguage() == 'de'\">DE</button>\n      <button (click)=\"localeEn()\" class=\"langButton\" [class.langActive]=\"currentLanguage() == 'en'\">EN</button>\n      <span translate style=\"padding-left:5px;min-width:100px;\">app.language.label</span>\n    </div>\n    <app-backend-health class=\"health\" [backendUrl]=\"backendUrl\"></app-backend-health>\n  </div>\n  <app-create-ticket [backendUrl]=\"backendUrl\"></app-create-ticket>\n  <app-pluralization-i18n-demo></app-pluralization-i18n-demo>\n  ",
             styles: [__webpack_require__("./src/app/app.component.css"), __webpack_require__("./src/app/app.shared.styles.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["d" /* TranslateService */]])
@@ -165,7 +165,7 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/app.shared.styles.css":
 /***/ (function(module, exports) {
 
-module.exports = "button {\n  border:1px solid #1080C1;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  background-color: #1080C1;\n  font-size: 15px;\n  color:#fff;\n  cursor: pointer;\n}\nbutton:hover {\n  border:1px solid #1080C1;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  background-color: #fff;\n  font-size: 15px;\n  color:#1080C1;\n}\nbutton:disabled {\n  border:1px solid #85B1CB;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  background-color: #85B1CB;\n  font-size: 15px;\n  color:#efefef;\n  cursor: not-allowed;\n}\n\n"
+module.exports = "button {\n  border:1px solid #1080C1;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  background-color: #1080C1;\n  font-size: 15px;\n  color:#fff;\n  cursor: pointer;\n}\nbutton:hover {\n  border:1px solid #1080C1;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  background-color: #fff;\n  font-size: 15px;\n  color:#1080C1;\n}\nbutton:disabled {\n  border:1px solid #85B1CB;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  background-color: #85B1CB;\n  font-size: 15px;\n  color:#efefef;\n  cursor: not-allowed;\n}\nh2 {\n  color: #1080C1;\n  text-transform: uppercase;\n  font-size:35px;\n  font-weight:300;\n  margin:0;\n  padding:0;\n}\n\n"
 
 /***/ }),
 
