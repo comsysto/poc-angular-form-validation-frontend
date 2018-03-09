@@ -294,6 +294,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 MIT
 MIT
 
+@angular/forms@5.2.8
+MIT
+MIT
+
 ngx-translate-messageformat-compiler@3.0.0
 MIT
 MIT License
