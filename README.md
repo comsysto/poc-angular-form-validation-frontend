@@ -11,7 +11,10 @@ Proof of Concept of ServerSide Form Validation with i18n and Angular Frontend.
 
 ### Proof of Concept Outline
 
-See [Backend](https://github.com/comsysto/poc-angular-form-validation-backend)
+ * See [Backend](https://github.com/comsysto/poc-angular-form-validation-backend)
+ * The Frontend should also support Intl MessageFormat pluralization support for 18n. Therefore we use:
+   * https://github.com/ngx-translate/core
+   * https://github.com/lephyrus/ngx-translate-messageformat-compiler
 
 
 &nbsp;
@@ -24,7 +27,7 @@ The Frontend will provide:
  * a form to to create *Tickets*.
  * form validation in the *Tickets* form.
  * Form Validation Rules and i18n messages loaded from backend.
-
+ * i18n JSON message files with pluralization support.
 
 &nbsp;
 
@@ -71,7 +74,9 @@ yarn test
 
 At best use [Visual Studio Code](https://code.visualstudio.com/) since it has great TypeScript support.
 
- * Do not forget to install https://github.com/editorconfig/editorconfig-vscode `ext install EditorConfig`.
+ * Do not forget to install [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+ * At best install the [Angular Essentials Package](https://marketplace.visualstudio.com/items?itemName=johnpapa.angular-essentials)
+ * See [Angular and VS Code Debugging Guide](https://code.visualstudio.com/docs/nodejs/angular-tutorial)
  * Add to config `{ "files.trimTrailingWhitespace": true }`
 
 &nbsp;

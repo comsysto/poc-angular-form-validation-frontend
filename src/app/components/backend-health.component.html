@@ -1,0 +1,8 @@
+<div class="health">
+  <div class="label" translate>backend.health.label</div>
+  <div
+    [class.spinner]="healthCheckInProgress"
+    [class.healthOk]="!healthCheckInProgress && backendIsHealthy"
+    [class.healthFail]="!healthCheckInProgress && !backendIsHealthy"
+  ></div>
+</div>
