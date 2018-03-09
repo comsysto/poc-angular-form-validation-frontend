@@ -20,10 +20,10 @@ git pull
 #
 # CLEAN
 #
-rm -rf assets
-rm -f index.html
-rm -f *.js.map
-rm -f *.js
+rm -rf assets || true
+rm -f index.html || true
+rm -f *.js.map || true
+rm -f *.js || true
 #
 # DEPLOY
 #
