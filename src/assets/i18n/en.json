@@ -1,0 +1,16 @@
+{
+  "app": {
+    "language": {
+      "label": "Language"
+    }
+  },
+  "backend": {
+    "health": {
+      "label": "Backend Health"
+    }
+  },
+  "pluralizationDemo": {
+    "headline": "I18n Pluralization with Intl MessageFormat",
+    "cats": "There {count, plural, =0{are} one{is} other{are}} {count} {count, plural, =0{cats} one{cat} other{cats}}"
+  }
+}

@@ -1,0 +1,33 @@
+.pluralizationDemo {
+  margin-top:80px;
+}
+.cat {
+  width:40px;
+  height: 70px;
+  margin-right:10px;
+}
+.cat:nth-of-type(1) path {
+  fill: #90C110;
+}
+.cat:nth-of-type(2) path {
+  fill: #7610C1;
+}
+.cat:nth-of-type(3) path {
+  fill: #C15410;
+}
+.cat:nth-of-type(4) path {
+  fill: #10B0C1;
+}
+.cat:nth-of-type(5) path {
+  fill: #C11068;
+}
+.cats {
+  margin-top:10px;
+  display: flex;
+  margin-bottom:15px;
+  height:70px;
+}
+pre {
+  background-color:#efefef;
+  padding:4px;
+}

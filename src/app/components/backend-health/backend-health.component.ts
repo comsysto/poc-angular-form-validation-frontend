@@ -11,7 +11,7 @@ import 'rxjs/add/observable/of';
   styleUrls: [ 'backend-health.component.css' ]
 })
 export class BackendHealthComponent implements OnInit {
-
+  backendUrl = 'https://poc-angular-form-validation.herokuapp.com'
   healthCheckInProgress = true;
   backendIsHealthy: boolean;
 
@@ -19,7 +19,7 @@ export class BackendHealthComponent implements OnInit {
 
   ngOnInit() {
     this.http
-      .get<boolean>('https://poc-angular-form-validation.herokuapp.com/api/greetings')
+      .get<boolean>(this.backendUrl + '/api/greetings')
       .map(() => true)
       .catch(() => Observable.of(false))
       .subscribe(health => {

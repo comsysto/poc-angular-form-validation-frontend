@@ -1,8 +1,8 @@
-<div class="health">
+<a [href]="backendUrl" target="_blank" class="health">
   <div class="label" translate>backend.health.label</div>
   <div
     [class.spinner]="healthCheckInProgress"
     [class.healthOk]="!healthCheckInProgress && backendIsHealthy"
     [class.healthFail]="!healthCheckInProgress && !backendIsHealthy"
   ></div>
-</div>
+</a>
